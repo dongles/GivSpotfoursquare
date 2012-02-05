@@ -1,3 +1,4 @@
+<% if current_user %>
 <div style="background-color:#00B2EE;padding:20px;font-size:25px;color:white;">
 DASHBOARD 
 </div>
@@ -38,3 +39,11 @@ DASHBOARD
 			
 		</div>
 		</div>
+<% else %>
+<div id="main-container">
+	<div id="main" class="wrapper clearfix">
+<center>Must be signed in to access this page<br>
+<%= link_to(image_tag("connect-blue.png", :style => "padding-top:20px;"),"/auth/foursquare") %>	</center>
+</div>
+</div>
+<% end %>	
