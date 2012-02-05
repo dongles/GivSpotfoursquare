@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GivSpot</title>
+  <%= stylesheet_link_tag    "application","style", "bootstrap.min", :media => "all" %>
+  <%= javascript_include_tag "application", "libs/modernizr-2.0.6.min", "script", "bootstrap.min" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<% if @title != "Home" %>
+	<div id="header-container">
+		<header class="wrapper clearfix">
+			<%= link_to(image_tag("givspot-color-v4.png", :width => "100px"),"/") %>
+			
+				<% if current_user %>
+				<div style="float:right;">
+					<%= link_to(image_tag(current_user.image, :width =>"35px", :style => "margin-top:5px;border-radius:6px;border:3px solid white;vertical-align:middle;"),dash_path)%>
+					
+					<%= link_to "Sign Out", signout_path, :style => 'padding-left:10px;color:white;text-decoration:none;font-size:17px;'%>
+					</div>
+				<% else %>
+				<%= link_to(image_tag("connect-blue.png", :style => "padding-top:20px;float:right;"),"/auth/foursquare") %>
+				<% end %>
+				<!--<ul>
+					<li><a href="#">nav ul li a</a></li>
+					<li><a href="#">nav ul li a</a></li>
+					<li><a href="#">nav ul li a</a></li>
+				</ul>-->
+		
+		</header>
+	</div>
+	<% end %>
+	
+
+<%= yield %>
+
+
+</body>
+<div id="footer-container">
+	<footer class="wrapper">
+		<%= image_tag("poweredByFoursquare_white.png", :width => "50%") %>
+		
+	</footer>
+</div>
+</html>

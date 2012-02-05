@@ -1,0 +1,74 @@
+<div id="header-container">
+	<header class="wrapper clearfix">
+		<% if current_user %>
+			<div class="cust_nav" style="float:right;">
+				<%= link_to(image_tag(current_user.image, :width =>"35px", :style => "margin-top:5px;border-radius:6px;border:3px solid white;vertical-align:middle;"),dash_path)%>
+				
+				
+				<%= link_to "Sign Out", signout_path, :style => 'padding-left:10px;color:white;text-decoration:none;font-size:17px;'%>
+				</div>
+		<% else %>
+		<%= link_to(image_tag("connect-blue.png", :style => "padding-top:20px;padding-right:55px;float:right;"),"/auth/foursquare") %>
+		<% end %>
+	
+		<%= link_to(image_tag("givspot-color-v4.png", :width => "65%", :style => "padding:15px;"),"/") %>
+		
+	</header>
+</div>
+<div id="main-container">
+	<div id="main" class="wrapper clearfix">
+<h1>Check-in to Giving</h1>
+<p>It’s simple really. GivSpot harnesses the power of FourSquare to help individuals, merchants, and nonprofits to raise money for a good cause. Through “charity check ins,” people can easily donate money to their favorite social cause. </p>
+<!--
+<h2>Nearby places using GivSpot</h2> 
+<h3>Check-in with Foursquare at these local places and help raise money for a charitable cause</h3>
+<p>There are no places nearby using GivSpot. Invite a local business to use GivSpot to raise money for your favorite charitable cause.</p>-->
+
+<center>
+<div class="row">
+ <div class="span4">
+	<%= image_tag("nonprofit.jpg", :width => "12%", :style =>"padding-top:12px;")%>
+ </div>
+<div class="span4">
+	<%= image_tag("glyphicons_042_group.png", :width => "12%", :style =>"padding-top:18px;opacity:0.6;")%>
+ </div>
+<div class="span4">
+	<%= image_tag("merchant.jpg", :width => "20%", :style =>"padding-top:3px;")%>
+ </div>
+</div>
+</center>
+<div class="row">
+	
+	<div class="span4">
+	<h2>Nonprofits</h2>
+	<p>GivSpot gives you an online platform to connect with donors and business owners. There are millions of Check-ins a day. The GivSpot platform gives awareness to social cause and allow you to build deeper connections with your community.</p>
+
+	<button class="btn btn-large disabled" style="float:right;margin-top:77px;">Coming Soon</button>
+	
+	
+	</div>
+	<div class="span4">
+	<h2>Individuals</h2>
+	<p>GivSpot is a new way to raise funds for your cause. Leverage your social reach for charitable purposes.</p>
+	
+	<button class="btn btn-large disabled" style="float:right;margin-top:132px;">Coming Soon</button>
+	
+	
+	</div>
+	<div class="span4">
+		
+	<h2>Merchants</h2>
+	<p>Bring a social mission to your business. Create your own "Check-in For Charity" campaign using GivSpot. How does it work? Simply pledge to donate money ($.25 to $2) for every person that checks-in to your venue using Foursquare. The GivSpot allows you to specify a max, so there are no surprises. Use GivSpot to organize and manage your campaign, including a dashboard that shows you information about your check-ins. </p>
+	
+	<%= link_to('Sign Up Here','/auth/foursquare',:class=>"btn btn-success btn-large", :style =>"text-decoration:none;float:right;margin-top:8px;color:#FFF;" )%>
+	
+	
+	</div>
+</div>
+
+
+
+
+
+</div>
+</div>
