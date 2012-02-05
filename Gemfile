@@ -9,6 +9,7 @@ gem 'pg'
 gem 'omniauth', :git => 'git://github.com/intridea/omniauth.git'
 gem 'omniauth-foursquare', :git => 'https://github.com/arunagw/omniauth-foursquare.git'
 gem 'foursquare2', :git => 'https://github.com/mattmueller/foursquare2.git'
+gem 'thin'
 
 
 # Gems used only for assets and not required
